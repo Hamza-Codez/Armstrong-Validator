@@ -31,4 +31,4 @@ An Armstrong number (or narcissistic number) is a number that is equal to the su
 - Ensure you have a modern web browser installed.
 - Optionally, have [Node.js](https://nodejs.org/) and npm installed for development.
 
-![Screenshot 1](images/Project-Screenshot.png)
+![Screenshot 1](images/Project-screen.png)

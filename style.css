@@ -33,7 +33,7 @@ body{
   background-color: rgb(214, 214, 214);
   padding: 12px;
   border: 2px solid rgb(134, 134, 134);
-  border-radius: 3px;
+  border-radius: 20rex;
 }
 
 .card .btn {
@@ -41,21 +41,24 @@ body{
   padding: 0%;
 }
 .card .btn #click {
-  width: 15rex;
+  width: 18rex;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(250, 190, 103);
+  background-color: rgb(245, 179, 99);
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  color: rgb(116, 77, 28);
+  color: rgb(145, 99, 21);
+  margin-top: 13px;
+
 }
-.btn:hover{
-  background-color: #bb7e2d;
+.btn #click:hover{
+  background-color: rgb(245, 192, 112);
+  color: rgb(146, 98, 25);
 }
-.btn:active {
+.btn #click:active {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
 }
