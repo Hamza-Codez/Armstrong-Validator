@@ -1,0 +1,72 @@
+body{
+  background-color: rgba(0, 0, 0, 0.712);
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.card{
+  background-color:rgba(149, 0, 224, 0.719);
+  border: 2px solid rgb(114, 84, 141);
+  height: 32rem;
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  border-radius: 12px;
+}
+
+.card .header h2 {
+  background-color: rgba(190, 100, 184, 0.719);
+  border: 1px solid rgb(97, 116, 116);
+  border-radius: 25rex;
+  padding: 11px;
+  padding-inline: 38px;
+  margin-top: 2.5rem;
+  margin-bottom: 2px;
+}
+
+.card .img1 {
+  width: 14rem;
+}
+.card .inBox input {
+  background-color: rgb(214, 214, 214);
+  padding: 12px;
+  border: 2px solid rgb(134, 134, 134);
+  border-radius: 3px;
+}
+
+.card .btn {
+  margin-top: 2rex;
+  padding: 0%;
+}
+.card .btn #click {
+  width: 15rex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(250, 190, 103);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  color: rgb(116, 77, 28);
+}
+.btn:hover{
+  background-color: #bb7e2d;
+}
+.btn:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.card .btn #click img{
+  width: 38px;
+  padding-left: 2px;
+}
+#result{
+  margin-top: 20px;
+}
+
+
+
