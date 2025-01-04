@@ -1,11 +1,16 @@
-body{
+body {
   background-color: rgba(0, 0, 0, 0.712);
   margin: 0;
   padding: 0;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.card{
-  background-color:rgba(149, 0, 224, 0.719);
+
+.card {
+  background-color: rgba(149, 0, 224, 0.719);
   border: 2px solid rgb(114, 84, 141);
   height: 32rem;
   width: 24rem;
@@ -14,34 +19,39 @@ body{
   align-items: center;
   margin: 2rem auto;
   border-radius: 12px;
+  padding: 1rem;
 }
 
 .card .header h2 {
   background-color: rgba(190, 100, 184, 0.719);
   border: 1px solid rgb(97, 116, 116);
-  border-radius: 25rex;
-  padding: 11px;
-  padding-inline: 38px;
+  border-radius: 25px;
+  padding: 11px 38px;
   margin-top: 2.5rem;
   margin-bottom: 2px;
+  text-align: center;
 }
 
 .card .img1 {
   width: 14rem;
+  max-width: 100%;
 }
+
 .card .inBox input {
   background-color: rgb(214, 214, 214);
   padding: 12px;
   border: 2px solid rgb(134, 134, 134);
-  border-radius: 20rex;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 300px;
 }
 
 .card .btn {
-  margin-top: 2rex;
-  padding: 0%;
+  margin-top: 10px;
 }
+
 .card .btn #click {
-  width: 18rex;
+  width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,24 +62,47 @@ body{
   font-size: 18px;
   color: rgb(145, 99, 21);
   margin-top: 13px;
-
+  padding: 10px;
 }
-.btn #click:hover{
+
+.btn #click:hover {
   background-color: rgb(245, 192, 112);
   color: rgb(146, 98, 25);
 }
+
 .btn #click:active {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
 }
 
-.card .btn #click img{
+.card .btn #click img {
   width: 38px;
   padding-left: 2px;
 }
-#result{
+
+#result {
   margin-top: 20px;
+  text-align: center;
 }
 
+@media (max-width: 1024px) { /* Tablets */
+  .card {
+    width: 20rem;
+    height: 30rem;
+  }
+}
 
-
+@media (max-width: 768px) { /* Mobile Devices */
+  .card {
+    width: 90%;
+    height: auto;
+    padding: 1.5rem;
+  }
+  .card .header h2 {
+    font-size: 1.2rem;
+    padding: 8px 24px;
+  }
+  .card .btn #click {
+    width: 100%;
+  }
+}

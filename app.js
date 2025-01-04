@@ -1,22 +1,15 @@
 function cheArm() {
-    var inputNum = document.getElementById('num');
-    var number = parseFloat(inputNum.value);
-    var gNum = number.toString();
+    var inputNum = parseFloat(document.getElementById('num').value);
+    var gNum = inputNum.toString();
     var output = document.getElementById('result');
     if (output) {
         if (gNum.length === 3) {
-            var d1 = parseFloat(gNum.charAt(0));
-            var d2 = parseFloat(gNum.charAt(1));
-            var d3 = parseFloat(gNum.charAt(2));
-            var ArmstNum = d1 * d1 * d1 + d2 * d2 * d2 + d3 * d3 * d3;
-            if (ArmstNum == number) {
-                output.innerText = "".concat(number, " is An Armstrong number");
-            }
-            else {
-                output.innerText = "".concat(number, " is not an Armstrong number");
-            }
+            var _a = gNum.split('').map(function (n) { return parseFloat(n); }), d1 = _a[0], d2 = _a[1], d3 = _a[2];
+            var isArmstNum = Math.pow(d1, 3) + Math.pow(d2, 3) + Math.pow(d3, 3) === inputNum;
+            output.innerText = isArmstNum
+                ? "".concat(inputNum, " is An Armstrong number") : "".concat(inputNum, " is not an Armstrong number");
         }
-        else if (gNum.length !== 3) {
+        else {
             output.innerText = "Please Enter a three digit number";
         }
     }
