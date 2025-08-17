@@ -3,23 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Armstrong Number</title>
+  <title>Galactic Armstrong Validator</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  
+  <div class="spaceship">
+    <div class="cockpit"></div>
+    <div class="wing left"></div>
+    <div class="wing right"></div>
+    <div class="engine"></div>
+  </div>
+
+  <div class="alien hidden" id="alien">
+    <div class="head">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="mouth"></div>
+    </div>
+    <div class="body"></div>
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+  </div>
+
   <div class="card">
-    <div class="header"><h2>Armstrong Validator</h2></div>
-    <img class="img1" src="images/A-curious-man-and-find-idea-on-transparent-background-PNG (1).png">
-    <div class="inBox">
-      <input type="number" id="num" placeholder="Enter a 3 digit number">
+    <div class="header">
+      <h1>GALACTIC ARMSTRONG VALIDATOR</h1>
+      <p class="subtitle">Prove your worth to the Cosmic Council</p>
     </div>
-    <div class="btn">
-      <button id="click" onclick="cheArm()"><strong>Validate</strong><img src="images/Hand-click-icon-.-pointer-icon-.png"></button>
+    
+    <div class="hologram">
+      <div class="holo-circle"></div>
+      <div class="holo-content">
+        <div class="inBox">
+          <input type="number" id="num" placeholder="Enter 3-digit cosmic code" maxlength="3">
+          <div class="laser-beam"></div>
+        </div>
+      </div>
     </div>
-    <div id="result">
-      <h4>Here's your Armstrong check</h4>
+    
+    <div class="btn-container">
+      <button id="click" onclick="cheArm()">
+        <span class="btn-text">INITIATE SCAN</span>
+        <div class="btn-lights">
+          <span class="light red"></span>
+          <span class="light blue"></span>
+          <span class="light green"></span>
+        </div>
+      </button>
+    </div>
+    
+    <div id="result" class="result-panel">
+      <div class="scanning hidden" id="scanning">
+        <div class="scan-line"></div>
+        <p>ANALYZING COSMIC PATTERNS...</p>
+      </div>
+      <h4 class="result-text">AWAITING INPUT, COMMANDER</h4>
+    </div>
+    
+    <div class="power-meter">
+      <div class="power-level" id="power-level"></div>
     </div>
   </div>
+
+  <audio id="laser-sound" src="sounds/laser.mp3" preload="auto"></audio>
+  <audio id="success-sound" src="sounds/success.mp3" preload="auto"></audio>
+  <audio id="fail-sound" src="sounds/fail.mp3" preload="auto"></audio>
+  <audio id="scan-sound" src="sounds/scan.mp3" preload="auto"></audio>
+  
+  <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
